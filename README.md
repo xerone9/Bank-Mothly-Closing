@@ -1,11 +1,11 @@
-# Indus University/Monthly Account Closing Automation
- For Indus University Only
+# Monthly Account Closing Automation
+ Automation designed as per institution need
 
 Monthly Bank Account Closing Report Automation
 
 It will only work with the Folder name "Daily Work" Present On the Desktop
 
-Normal Pracitce of Indus University Account that they make folders with date name and paste all the statement thier.
+Normal Pracitce of institution is that they make folders with date name and paste all the statement thier.
 
 ______________________________________________________________________________________________________________________________________
 
