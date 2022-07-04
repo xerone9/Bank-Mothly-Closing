@@ -462,6 +462,7 @@ for row in range(1, sheet.max_row):
     else:
         pass
 
+
 mr = sheet.max_row
 mc = sheet.max_column
 k = 1
@@ -485,6 +486,8 @@ for i in (AllBank):
             m += 1
             k = m
             l = 1
+
+
 
 for row in range(1, sheet2.max_row):
     for col in range(1, sheet2.max_column):
@@ -510,7 +513,7 @@ for row in range(1, sheet2.max_row + 1):
     cell = sheet2.cell(row, 1)
     if cell.value == "Indus University Education (0861480800063)":
         grow = row
-sheet2.insert_rows(grow)
+        sheet2.insert_rows(grow)
 for row in range(1, sheet2.max_row + 1):
     cell = sheet2.cell(row, 1)
     if cell.value == "Indus University SC (0861480800074)":
@@ -528,6 +531,8 @@ for row in range(1, sheet2.max_row):
         cell.value = "Total: "
 cell = sheet2.cell(sheet2.max_row + 1, 1)
 cell.value = "Total: "
+
+
 
 for row in range(1, sheet2.max_row + 1):
     cell = sheet2.cell(row, 1)
@@ -694,106 +699,104 @@ redFill = PatternFill(start_color='F5F5F5',
 
 # Selecting Rows and Pasting it in sheet 2. Used Try because the account 6-3 is dormant and not it is throwing index error. Working is accurate but now 6-3 array is taking the values of the next account. and same mechanics is below
 
-try:
-    total336 = []
-    acid = rowsToBeAdded[0]
-    for rows in rowsToBeAdded:
-        acid += 1
-        ggwp = acid - rows
-        if ggwp > 0:
-            total336.append(rows)
-        else:
-            pass
 
-    for rows in total336:
-        rowsToBeAdded.pop(0)
+total336 = []
+acid = rowsToBeAdded[0]
+for rows in rowsToBeAdded:
+    acid += 1
+    ggwp = acid - rows
+    if ggwp > 0:
+        total336.append(rows)
+    else:
+        pass
 
-
-    total63 = []
-    acid = rowsToBeAdded[0]
-    for rows in rowsToBeAdded:
-        acid += 1
-        ggwp = acid - rows
-        if ggwp > 0:
-            total63.append(rows)
-        else:
-            pass
-
-    for rows in total63:
-        rowsToBeAdded.pop(0)
+for rows in total336:
+    rowsToBeAdded.pop(0)
 
 
-    total41 = []
-    acid = rowsToBeAdded[0]
-    for rows in rowsToBeAdded:
-        acid += 1
-        ggwp = acid - rows
-        if ggwp > 0:
-            total41.append(rows)
-        else:
-            pass
-
-    for rows in total41:
-        rowsToBeAdded.pop(0)
-
-
-    total85 = []
-    acid = rowsToBeAdded[0]
-    for rows in rowsToBeAdded:
-        acid += 1
-        ggwp = acid - rows
-        if ggwp > 0:
-            total85.append(rows)
-        else:
-            pass
-
-    for rows in total85:
-        rowsToBeAdded.pop(0)
+# total63 = []
+# acid = rowsToBeAdded[0]
+# for rows in rowsToBeAdded:
+#     acid += 1
+#     ggwp = acid - rows
+#     if ggwp > 0:
+#         total63.append(rows)
+#     else:
+#         pass
+#
+# for rows in total63:
+#     rowsToBeAdded.pop(0)
 
 
-    total100 = []
-    acid = rowsToBeAdded[0]
-    for rows in rowsToBeAdded:
-        acid += 1
-        ggwp = acid - rows
-        if ggwp > 0:
-            total100.append(rows)
-        else:
-            pass
+total41 = []
+acid = rowsToBeAdded[0]
+for rows in rowsToBeAdded:
+    acid += 1
+    ggwp = acid - rows
+    if ggwp > 0:
+        total41.append(rows)
+    else:
+        pass
 
-    for rows in total100:
-        rowsToBeAdded.pop(0)
-
-
-    total507 = []
-    acid = rowsToBeAdded[0]
-    for rows in rowsToBeAdded:
-        acid += 1
-        ggwp = acid - rows
-        if ggwp > 0:
-            total507.append(rows)
-        else:
-            pass
+for rows in total41:
+    rowsToBeAdded.pop(0)
 
 
-    for rows in total507:
-        rowsToBeAdded.pop(0)
+total85 = []
+acid = rowsToBeAdded[0]
+for rows in rowsToBeAdded:
+    acid += 1
+    ggwp = acid - rows
+    if ggwp > 0:
+        total85.append(rows)
+    else:
+        pass
+
+for rows in total85:
+    rowsToBeAdded.pop(0)
 
 
-    total74 = []
-    acid = rowsToBeAdded[0]
-    for rows in rowsToBeAdded:
-        acid += 1
-        ggwp = acid - rows
-        if ggwp > 0:
-            total74.append(rows)
-        else:
-            pass
-    for rows in total74:
-        rowsToBeAdded.pop(0)
+total100 = []
+acid = rowsToBeAdded[0]
+for rows in rowsToBeAdded:
+    acid += 1
+    ggwp = acid - rows
+    if ggwp > 0:
+        total100.append(rows)
+    else:
+        pass
 
-except IndexError:
-    pass
+for rows in total100:
+    rowsToBeAdded.pop(0)
+
+
+total507 = []
+acid = rowsToBeAdded[0]
+for rows in rowsToBeAdded:
+    acid += 1
+    ggwp = acid - rows
+    if ggwp > 0:
+        total507.append(rows)
+    else:
+        pass
+
+
+for rows in total507:
+    rowsToBeAdded.pop(0)
+
+
+total74 = []
+acid = rowsToBeAdded[0]
+for rows in rowsToBeAdded:
+    acid += 1
+    ggwp = acid - rows
+    if ggwp > 0:
+        total74.append(rows)
+    else:
+        pass
+for rows in total74:
+    rowsToBeAdded.pop(0)
+
 
 print("Totalling Debit And Credit Columns...")
 time.sleep(1.5)
@@ -829,37 +832,37 @@ grandTotal = 0
 debit336 = debitTotal
 debitTotal = 0
 
-for throw in total63:
-    cell = sheet2.cell(throw, 4)
-    if cell.value is None:
-        pass
-    else:
-        try:
-            grandTotal += cell.value
-        except TypeError:
-            value = str(cell.value)
-            value1 = datetime.datetime.strptime(value, "%Y-%m-%d %H:%M:%S").strftime("%m-%d-%y")
-            cell.value = int(value1.replace("-", ""))
-            grandTotal += cell.value
-            break
-
-for throw in total63:
-    cell = sheet2.cell(throw, 5)
-    if cell.value is None:
-        pass
-    else:
-        try:
-            debitTotal += cell.value
-        except TypeError:
-            value = str(cell.value)
-            value1 = datetime.datetime.strptime(value, "%Y-%m-%d %H:%M:%S").strftime("%m-%d-%y")
-            cell.value = int(value1.replace("-", ""))
-            debitTotal += cell.value
-
-total63 = grandTotal
-grandTotal = 0
-debit63 = debitTotal
-debitTotal = 0
+# for throw in total63:
+#     cell = sheet2.cell(throw, 4)
+#     if cell.value is None:
+#         pass
+#     else:
+#         try:
+#             grandTotal += cell.value
+#         except TypeError:
+#             value = str(cell.value)
+#             value1 = datetime.datetime.strptime(value, "%Y-%m-%d %H:%M:%S").strftime("%m-%d-%y")
+#             cell.value = int(value1.replace("-", ""))
+#             grandTotal += cell.value
+#             break
+#
+# for throw in total63:
+#     cell = sheet2.cell(throw, 5)
+#     if cell.value is None:
+#         pass
+#     else:
+#         try:
+#             debitTotal += cell.value
+#         except TypeError:
+#             value = str(cell.value)
+#             value1 = datetime.datetime.strptime(value, "%Y-%m-%d %H:%M:%S").strftime("%m-%d-%y")
+#             cell.value = int(value1.replace("-", ""))
+#             debitTotal += cell.value
+#
+# total63 = grandTotal
+# grandTotal = 0
+# debit63 = debitTotal
+# debitTotal = 0
 
 for throw in total41:
     cell = sheet2.cell(throw, 4)
@@ -1027,7 +1030,7 @@ for row in range(1, sheet2.max_row):
 
 creditTotal = []
 creditTotal.append(total336)
-creditTotal.append(total63)
+# creditTotal.append(total63)
 creditTotal.append(total41)
 creditTotal.append(total85)
 creditTotal.append(total100)
@@ -1036,12 +1039,16 @@ creditTotal.append(total74)
 
 debitTotal = []
 debitTotal.append(debit336)
-debitTotal.append(debit63)
+# debitTotal.append(debit63)
 debitTotal.append(debit41)
 debitTotal.append(debit85)
 debitTotal.append(debit100)
 debitTotal.append(debit507)
 debitTotal.append(debit74)
+
+
+
+
 
 for f, b, d in zip(creditTotal, totalLocation, debitTotal):
     cell = sheet2.cell(b, 4)
