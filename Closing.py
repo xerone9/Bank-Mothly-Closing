@@ -669,6 +669,7 @@ thin_border = Border(left=Side(style='thin'),
                      top=Side(style='thin'),
                      bottom=Side(style='thin'))
 
+
 for row in rowsToBeAdded:
     cell = sheet2.cell(row, 1)
     cell.border = thin_border
@@ -690,100 +691,112 @@ redFill = PatternFill(start_color='F5F5F5',
                       end_color='F5F5F5',
                       fill_type='solid')
 
+
+# Selecting Rows and Pasting it in sheet 2. Used Try because the account 6-3 is dormant and not it is throwing index error. Working is accurate but now 6-3 array is taking the values of the next account. and same mechanics is below
+
+try:
+    total336 = []
+    acid = rowsToBeAdded[0]
+    for rows in rowsToBeAdded:
+        acid += 1
+        ggwp = acid - rows
+        if ggwp > 0:
+            total336.append(rows)
+        else:
+            pass
+
+    for rows in total336:
+        rowsToBeAdded.pop(0)
+
+
+    total63 = []
+    acid = rowsToBeAdded[0]
+    for rows in rowsToBeAdded:
+        acid += 1
+        ggwp = acid - rows
+        if ggwp > 0:
+            total63.append(rows)
+        else:
+            pass
+
+    for rows in total63:
+        rowsToBeAdded.pop(0)
+
+
+    total41 = []
+    acid = rowsToBeAdded[0]
+    for rows in rowsToBeAdded:
+        acid += 1
+        ggwp = acid - rows
+        if ggwp > 0:
+            total41.append(rows)
+        else:
+            pass
+
+    for rows in total41:
+        rowsToBeAdded.pop(0)
+
+
+    total85 = []
+    acid = rowsToBeAdded[0]
+    for rows in rowsToBeAdded:
+        acid += 1
+        ggwp = acid - rows
+        if ggwp > 0:
+            total85.append(rows)
+        else:
+            pass
+
+    for rows in total85:
+        rowsToBeAdded.pop(0)
+
+
+    total100 = []
+    acid = rowsToBeAdded[0]
+    for rows in rowsToBeAdded:
+        acid += 1
+        ggwp = acid - rows
+        if ggwp > 0:
+            total100.append(rows)
+        else:
+            pass
+
+    for rows in total100:
+        rowsToBeAdded.pop(0)
+
+
+    total507 = []
+    acid = rowsToBeAdded[0]
+    for rows in rowsToBeAdded:
+        acid += 1
+        ggwp = acid - rows
+        if ggwp > 0:
+            total507.append(rows)
+        else:
+            pass
+
+
+    for rows in total507:
+        rowsToBeAdded.pop(0)
+
+
+    total74 = []
+    acid = rowsToBeAdded[0]
+    for rows in rowsToBeAdded:
+        acid += 1
+        ggwp = acid - rows
+        if ggwp > 0:
+            total74.append(rows)
+        else:
+            pass
+    for rows in total74:
+        rowsToBeAdded.pop(0)
+
+except IndexError:
+    pass
+
 print("Totalling Debit And Credit Columns...")
 time.sleep(1.5)
-
-
-total336 = []
-acid = rowsToBeAdded[0]
-for rows in rowsToBeAdded:
-    acid += 1
-    ggwp = acid - rows
-    if ggwp > 0:
-        total336.append(rows)
-    else:
-        pass
-
-for rows in total336:
-    rowsToBeAdded.pop(0)
-
-total63 = []
-acid = rowsToBeAdded[0]
-for rows in rowsToBeAdded:
-    acid += 1
-    ggwp = acid - rows
-    if ggwp > 0:
-        total63.append(rows)
-    else:
-        pass
-
-for rows in total63:
-    rowsToBeAdded.pop(0)
-
-total41 = []
-acid = rowsToBeAdded[0]
-for rows in rowsToBeAdded:
-    acid += 1
-    ggwp = acid - rows
-    if ggwp > 0:
-        total41.append(rows)
-    else:
-        pass
-
-for rows in total41:
-    rowsToBeAdded.pop(0)
-
-total85 = []
-acid = rowsToBeAdded[0]
-for rows in rowsToBeAdded:
-    acid += 1
-    ggwp = acid - rows
-    if ggwp > 0:
-        total85.append(rows)
-    else:
-        pass
-
-for rows in total85:
-    rowsToBeAdded.pop(0)
-
-total100 = []
-acid = rowsToBeAdded[0]
-for rows in rowsToBeAdded:
-    acid += 1
-    ggwp = acid - rows
-    if ggwp > 0:
-        total100.append(rows)
-    else:
-        pass
-
-for rows in total100:
-    rowsToBeAdded.pop(0)
-
-total507 = []
-acid = rowsToBeAdded[0]
-for rows in rowsToBeAdded:
-    acid += 1
-    ggwp = acid - rows
-    if ggwp > 0:
-        total507.append(rows)
-    else:
-        pass
-
-for rows in total507:
-    rowsToBeAdded.pop(0)
-
-total74 = []
-acid = rowsToBeAdded[0]
-for rows in rowsToBeAdded:
-    acid += 1
-    ggwp = acid - rows
-    if ggwp > 0:
-        total74.append(rows)
-    else:
-        pass
-
-for rows in total74:
-    rowsToBeAdded.pop(0)
 
 for throw in total336:
     cell = sheet2.cell(throw, 4)
