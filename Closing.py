@@ -284,7 +284,6 @@ for row in range(1, sheet.max_row + 1):
     if cell.value == "Sno":
         vell = sheet.cell(row + 1, 1)
         try:
-            int(vell.value)
             if vell.value > 1:
                 sheet.delete_rows(row - 1)
                 sheet.delete_rows(row - 1)
@@ -292,12 +291,13 @@ for row in range(1, sheet.max_row + 1):
             sheet.delete_rows(row - 1)
             sheet.delete_rows(row - 1)
 
+
+
 print("")
 print("Setting/Creating Columns [S.No, Transaction Date, Total No Of Deposits, Dr, Cr, Balance]...")
 time.sleep(1.5)
 
-
-for row in range(1, sheet.max_row + 1):
+for row in reversed(range(1, sheet.max_row)):
     cell = sheet.cell(row, 1)
     if cell.value == "Sno":
         sheet.insert_rows(row + 1)
@@ -317,7 +317,6 @@ for row in range(1, sheet.max_row + 1):
 print("")
 print("Adding Account Numbers To Account Names (Account Numbers are not in Sharafat Report)...")
 time.sleep(1.5)
-
 
 for row in range(1, sheet.max_row + 1):
     cell = sheet.cell(row, 1)
@@ -622,6 +621,8 @@ sheet2.merge_cells(start_row=sheet2.max_row, start_column=1, end_row=sheet2.max_
 
 cell = sheet2.cell(4, 2)
 
+wb.save(desktop)
+
 print("Refromatting Dates As Per Our Formatting...")
 time.sleep(1.5)
 
@@ -786,7 +787,10 @@ for rows in total507:
 
 
 total74 = []
-acid = rowsToBeAdded[0]
+try:
+    acid = rowsToBeAdded[0]
+except IndexError:
+    pass
 for rows in rowsToBeAdded:
     acid += 1
     ggwp = acid - rows
