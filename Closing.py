@@ -50,6 +50,8 @@ Bank66 = os.path.expanduser("~\desktop\\Daily Work\\" + Month + "\\" + Month + "
 Bank100 = os.path.expanduser("~\desktop\\Daily Work\\" + Month + "\\" + Month + "\\10-0")
 Bank507 = os.path.expanduser("~\desktop\\Daily Work\\" + Month + "\\" + Month + "\\50-7")
 Bank55 = os.path.expanduser("~\desktop\\Daily Work\\" + Month + "\\" + Month + "\\5-5")
+Bank405 = os.path.expanduser("~\desktop\\Daily Work\\" + Month + "\\" + Month + "\\40-5")
+Bank391 = os.path.expanduser("~\desktop\\Daily Work\\" + Month + "\\" + Month + "\\39-1")
 try:
     os.mkdir(Month2021)
     print("Successfully created the directory %s" % Month2021)
@@ -71,6 +73,10 @@ try:
     print ("Successfully created the directory %s " % Bank507)
     os.mkdir(Bank55)
     print ("Successfully created the directory %s " % Bank55)
+    os.mkdir(Bank405)
+    print("Successfully created the directory %s " % Bank405)
+    os.mkdir(Bank391)
+    print("Successfully created the directory %s " % Bank391)
 except FileExistsError:
     input("Some Files/Folders Already Exist. If you had made any modification Close or module or Press Enter To Continue...")
     pass
@@ -157,6 +163,22 @@ for root, dirs, files in os.walk(desktop):
                 copyfile(root + "\\" + file,
                          Bank507 + "\\" + file)
                 print(file)
+        elif file.startswith('0861480800405'):
+            pather = desktop + Month + "\\40-5\\" + file
+            if os.path.isfile(pather) and os.access(pather, os.R_OK):
+                pass
+            else:
+                copyfile(root + "\\" + file,
+                         Bank405 + "\\" + file)
+                print(file)
+        elif file.startswith('0861480800391'):
+            pather = desktop + Month + "\\39-1\\" + file
+            if os.path.isfile(pather) and os.access(pather, os.R_OK):
+                pass
+            else:
+                copyfile(root + "\\" + file,
+                         Bank391 + "\\" + file)
+                print(file)
 #
 # ####################################### !!!!!!!!! Merging PDF !!!!!!!!!!!!!!!!!! ############################################################
 #
@@ -221,6 +243,18 @@ for subdir, dirs, files in os.walk(desktop):
     for file in reversed(files):
         filepath = subdir + os.sep + file
         if file.startswith('0860380800066'):
+            if filepath.endswith((".pdf", ".PDF")):
+                file_dict[file] = filepath
+for subdir, dirs, files in os.walk(desktop):
+    for file in reversed(files):
+        filepath = subdir + os.sep + file
+        if file.startswith('0861480800405'):
+            if filepath.endswith((".pdf", ".PDF")):
+                file_dict[file] = filepath
+for subdir, dirs, files in os.walk(desktop):
+    for file in reversed(files):
+        filepath = subdir + os.sep + file
+        if file.startswith('0861480800391'):
             if filepath.endswith((".pdf", ".PDF")):
                 file_dict[file] = filepath
 
